@@ -4,7 +4,7 @@
 
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
-Version: 	3.2.0
+Version: 	3.2.1
 Release: %mkrel 1
 Epoch: 1
 License: 	LGPL
@@ -19,29 +19,23 @@ BuildRequires: 	pygtk2.0-devel
 BuildRequires: 	desktop-file-utils
 BuildRequires: 	gtk-doc
 BuildRequires: 	scrollkeeper
-BuildRequires: 	gnome-doc-utils libxslt-proc
+BuildRequires: 	gnome-doc-utils
 BuildRequires: 	perl-XML-Parser
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils
 Requires: pygtk2.0
 
 %description
-Glade is a Widget builder for Gtk/gnome. 
-It allows to create a gtk/gnome interface in C, C++, Ada and Perl
+Glade is a RAD tool to enable quick & easy development of user interfaces
+for the Gtk+ toolkit and the GNOME desktop environment.
+The user interfaces designed in Glade are stored in XML format,
+enabling easy integration with external tools.
+In particular libglade can load the XML files and create the interfaces
+at runtime. The DTD for the XML files is included with libglade, and is
+also at http://glade.gnome.org/glade-2.0.dtd.
+Other tools are available which can turn the XML files into source code
+in languages such as C++, Perl and Python.
 
-This version of Glade (Glade-3) is a complete rewrite of the original
-Glade codebase.
-It has useful new features (Undo/Redo, MultiProject support) and has a
-cleaner architecture, note however that it is not ready yet for everyday
-use and lacks support for additional widgets, as Gnome and Gnome-db widgets.
-One of the main differnces from glade-2 is that C code generation has been
-removed from glade-3: this has been done on purpose, since using generated
-code is deprecated; the preferred way to use glade files is with libglade.
-Another important thing to note is that the XML format has _not_ changed,
-so you can work on the same project both with glade-3 and with glade-2.
-For a more details on what has changed, what still needs work, etc. see
-the NEWS, BUGS and TODO files.
-Comments, bug reports and patches are more than welcome.
 
 %package -n %{libname}
 Summary:	Libraries required for glade-3
@@ -142,5 +136,3 @@ rm -fr %buildroot
 %{_libdir}/*.la
 %{_libdir}/*.so
 %_datadir/gtk-doc/html/*
-
-
