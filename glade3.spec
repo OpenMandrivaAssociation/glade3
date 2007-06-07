@@ -1,10 +1,10 @@
 %define name glade3
-%define major 	5
+%define major 	6
 %define libname %mklibname gladeui1_ %major
 
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
-Version: 	3.2.2
+Version: 	3.3.0
 Release: %mkrel 1
 Epoch: 1
 License: 	LGPL
@@ -116,10 +116,10 @@ rm -fr %buildroot
 %{_bindir}/glade-3
 %dir %{_libdir}/glade3/
 %dir %{_libdir}/glade3/modules/
-%dir %{_libdir}/glade3/bindings
+#%dir %{_libdir}/glade3/bindings
+#%{_libdir}/glade3/bindings/libgladepython.so
 %{_libdir}/glade3/modules/libgladegtk.so
 %{_libdir}/glade3/modules/libgladegnome.so
-%{_libdir}/glade3/bindings/libgladepython.so
 %dir %_datadir/omf/*
 %_datadir/omf/*/*-C.omf
 %{_datadir}/glade3
