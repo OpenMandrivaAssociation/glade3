@@ -1,10 +1,11 @@
 %define name glade3
-%define major 	6
+%define major 	7
 %define libname %mklibname gladeui1_ %major
+%define libnamedev %mklibname -d gladeui1_
 
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
-Version: 	3.3.1
+Version: 	3.3.2
 Release: %mkrel 1
 Epoch: 1
 License: 	LGPL
@@ -45,7 +46,7 @@ Provides:	libgladeui = %epoch:%{version}
 %description -n %{libname}
 Libraries and file require to run program built with glade-3
 
-%package -n %{libname}-devel
+%package -n %{libnamedev}
 Summary:	Static libraries, include files for libgladeui (glade-3)
 Group:		Development/GNOME and GTK+
 Requires:	%{libname} = %epoch:%{version}
@@ -53,8 +54,9 @@ Provides:	libgladeui-devel = %epoch:%{version}-%{release}
 Provides:	libgladeui1-devel = %epoch:%{version}-%{release}
 Provides:	glade3-devel = %epoch:%{version}-%{release}
 Provides:	libgladeui%{major}-devel = %epoch:%{version}-%{release}
+Conflicts: %mklibname -d gladeui1_ 6
 
-%description -n %{libname}-devel
+%description -n %{libnamedev}
 Static library, headers files and documentation needed in order
 to develop applications using libgladeui (glade-3).
 
@@ -130,7 +132,7 @@ rm -fr %buildroot
 %files -n %{libname}
 %{_libdir}/libgladeui-1.so.%{major}*
 
-%files -n %{libname}-devel
+%files -n %{libnamedev}
 %{_includedir}/libgladeui-1.0/
 %{_libdir}/pkgconfig/gladeui-1.0.pc
 %{_libdir}/*.la
