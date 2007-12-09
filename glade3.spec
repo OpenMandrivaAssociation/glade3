@@ -6,7 +6,7 @@
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
 Version: 	3.4.0
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 License: 	LGPL
 Url: 		http://glade.gnome.org/
@@ -16,8 +16,8 @@ BuildRoot: 	%{_tmppath}/%{name}-%{version}-root
 BuildRequires: 	libxml2-devel
 BuildRequires: 	libgnomeprintui-devel
 BuildRequires: 	libgnomeui2-devel
+BuildRequires:	desktop-file-utils
 BuildRequires: 	pygtk2.0-devel
-BuildRequires: 	desktop-file-utils
 BuildRequires: 	gtk-doc
 BuildRequires: 	scrollkeeper
 BuildRequires: 	gnome-doc-utils
@@ -78,17 +78,10 @@ done
 
 
 # menu
-install -m 755 -d %{buildroot}%{_menudir}
-cat > %{buildroot}%{_menudir}/%{name} <<EOF
-?package(%{name}): command="%{_bindir}/glade-3" needs="X11" icon="glade-3.png"\
-  section="More Applications/Development/Development Environments" \
-  title="Glade 3" longtitle="GTK/GNOME 3 Widget Builder" startup_notify="true" xdg="true"
-EOF
-
 perl -pi -e "s/Glade/Glade 3/" $RPM_BUILD_ROOT%{_datadir}/applications/*
 desktop-file-install --vendor="" \
   --remove-category="Application" \
-  --add-category="X-MandrivaLinux-MoreApplications-Development-DevelopmentEnvironments;GUIDesigner" \
+  --add-category="GUIDesigner" \
   --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
 find %buildroot -name \*.la|xargs chmod 644
@@ -129,7 +122,6 @@ rm -fr %buildroot
 %{_datadir}/glade3
 %{_datadir}/applications/glade-3.desktop
 %_datadir/icons/hicolor/*/apps/glade*
-%{_menudir}/%name
 
 %files -n %{libname}
 %{_libdir}/libgladeui-1.so.%{major}*
