@@ -12,6 +12,7 @@ License: 	LGPL
 Url: 		http://glade.gnome.org/
 Group: 		Development/GNOME and GTK+
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-root
 BuildRequires: 	libxml2-devel
 BuildRequires: 	libgnomeprintui-devel
 BuildRequires: 	libgnomeui2-devel
