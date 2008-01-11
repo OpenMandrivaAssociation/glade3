@@ -107,7 +107,7 @@ rm -fr %buildroot
 
 %files -f %{name}-2.0.lang
 %defattr(-, root, root)
-%doc AUTHORS ChangeLog COPYING README TODO
+%doc AUTHORS COPYING README TODO
 %{_bindir}/glade-3
 %dir %{_libdir}/glade3/
 %dir %{_libdir}/glade3/modules/
@@ -127,6 +127,7 @@ rm -fr %buildroot
 %{_libdir}/libgladeui-1.so.%{major}*
 
 %files -n %{libnamedev}
+%doc ChangeLog
 %{_includedir}/libgladeui-1.0/
 %{_libdir}/pkgconfig/gladeui-1.0.pc
 %{_libdir}/*.la
