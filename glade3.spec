@@ -1,11 +1,11 @@
 %define name glade3
-%define major 	7
+%define major 	8
 %define libname %mklibname gladeui1_ %major
 %define libnamedev %mklibname -d gladeui1_
 
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
-Version: 	3.5.0
+Version: 	3.5.2
 Release: %mkrel 1
 Epoch: 1
 License: 	LGPL
