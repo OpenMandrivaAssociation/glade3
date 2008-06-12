@@ -87,17 +87,21 @@ desktop-file-install --vendor="" \
 find %buildroot -name \*.la|xargs chmod 644
 rm -f %buildroot%_libdir/glade3/*/libglade*a
 
+%if %mdkversion < 200900
 %post
 %update_scrollkeeper
 %update_menus
 %update_desktop_database
 %update_icon_cache hicolor
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_scrollkeeper
 %clean_menus
 %clean_desktop_database
 %clean_icon_cache hicolor
+%endif
 
 %if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
