@@ -5,8 +5,8 @@
 
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
-Version: 	3.5.2
-Release: %mkrel 3
+Version: 	3.5.3
+Release: %mkrel 1
 Epoch: 1
 License: 	GPLv2+
 Url: 		http://glade.gnome.org/
@@ -121,8 +121,7 @@ rm -fr %buildroot
 %dir %{_libdir}/glade3/modules/
 #gw not found by find_lang
 %lang(en_GB)  %_datadir/gnome/help/glade/en_GB/
-#%dir %{_libdir}/glade3/bindings
-#%{_libdir}/glade3/bindings/libgladepython.so
+%{_libdir}/glade3/modules/libgladepython.so
 %{_libdir}/glade3/modules/libgladegtk.so
 %{_libdir}/glade3/modules/libgladegnome.so
 %dir %_datadir/omf/*
