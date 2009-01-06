@@ -5,8 +5,8 @@
 
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
-Version: 	3.5.4
-Release: %mkrel 2
+Version: 	3.5.5
+Release: %mkrel 1
 Epoch: 1
 License: 	GPLv2+
 Url: 		http://glade.gnome.org/
