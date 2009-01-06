@@ -21,7 +21,7 @@ BuildRequires: 	pygtk2.0-devel
 BuildRequires: 	gtk-doc
 BuildRequires: 	scrollkeeper
 BuildRequires: 	gnome-doc-utils
-BuildRequires: 	perl-XML-Parser
+BuildRequires: 	intltool
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils
 Requires: pygtk2.0
