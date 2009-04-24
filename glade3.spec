@@ -5,7 +5,7 @@
 
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
-Version: 	3.6.2
+Version: 	3.6.3
 Release: %mkrel 1
 Epoch: 1
 License: 	GPLv2+
