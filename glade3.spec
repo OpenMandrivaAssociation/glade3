@@ -6,7 +6,7 @@
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
 Version: 	3.6.7
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 License: 	GPLv2+
 Url: 		http://glade.gnome.org/
@@ -14,7 +14,6 @@ Group: 		Development/GNOME and GTK+
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-root
 BuildRequires: 	libxml2-devel
-BuildRequires: 	libgnomeprintui-devel
 BuildRequires: 	libgnomeui2-devel
 BuildRequires:	desktop-file-utils
 BuildRequires: 	pygtk2.0-devel
