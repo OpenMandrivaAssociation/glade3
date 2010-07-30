@@ -1,12 +1,12 @@
 %define name glade3
-%define major 	9
+%define major 	10
 %define libname %mklibname gladeui1_ %major
 %define libnamedev %mklibname -d gladeui1_
 
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
-Version: 	3.6.7
-Release: %mkrel 3
+Version: 	3.7.1
+Release: %mkrel 1
 Epoch: 1
 License: 	GPLv2+
 Url: 		http://glade.gnome.org/
@@ -118,8 +118,6 @@ rm -fr %buildroot
 %{_bindir}/glade-3
 %dir %{_libdir}/glade3/
 %dir %{_libdir}/glade3/modules/
-#gw not found by find_lang
-%lang(en_GB)  %_datadir/gnome/help/glade/en_GB/
 %{_libdir}/glade3/modules/libgladepython.so
 %{_libdir}/glade3/modules/libgladegtk.so
 %{_libdir}/glade3/modules/libgladegnome.so
