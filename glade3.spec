@@ -1,12 +1,12 @@
 %define name glade3
-%define major 	10
+%define major 	11
 %define libname %mklibname gladeui1_ %major
 %define libnamedev %mklibname -d gladeui1_
 
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
-Version: 	3.7.1
-Release: %mkrel 2
+Version: 	3.7.2
+Release: %mkrel 1
 Epoch: 1
 License: 	GPLv2+
 Url: 		http://glade.gnome.org/
@@ -65,7 +65,7 @@ to develop applications using libgladeui (glade-3).
 
 %build
 %configure2_5x --enable-gtk-doc --disable-scrollkeeper
-%make
+make
 
 %install
 rm -fr %buildroot
@@ -116,6 +116,7 @@ rm -fr %buildroot
 %defattr(-, root, root)
 %doc AUTHORS COPYING README TODO
 %{_bindir}/glade-3
+%{_bindir}/glade-previewer
 %dir %{_libdir}/glade3/
 %dir %{_libdir}/glade3/modules/
 %{_libdir}/glade3/modules/libgladepython.so
