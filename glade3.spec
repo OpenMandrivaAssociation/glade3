@@ -5,7 +5,7 @@
 
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
-Version: 	3.7.2
+Version: 	3.7.3
 Release: %mkrel 1
 Epoch: 1
 License: 	GPLv2+
@@ -116,7 +116,7 @@ rm -fr %buildroot
 %defattr(-, root, root)
 %doc AUTHORS COPYING README TODO
 %{_bindir}/glade-3
-%{_bindir}/glade-previewer
+%{_bindir}/glade-3-previewer
 %dir %{_libdir}/glade3/
 %dir %{_libdir}/glade3/modules/
 %{_libdir}/glade3/modules/libgladepython.so
