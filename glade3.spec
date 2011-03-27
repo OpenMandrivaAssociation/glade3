@@ -1,13 +1,14 @@
 %define name glade3
+%define api 	1
 %define major 	11
-%define libname %mklibname gladeui1_ %major
-%define libnamedev %mklibname -d gladeui1_
+%define libname %mklibname gladeui %api %major
+%define libnamedev %mklibname -d gladeui %api
 
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
 Version: 	3.7.3
-Release: %mkrel 1
-Epoch: 1
+Release:	%mkrel 2
+Epoch:		1
 License: 	GPLv2+
 Url: 		http://glade.gnome.org/
 Group: 		Development/GNOME and GTK+
@@ -54,6 +55,7 @@ Provides:	libgladeui1-devel = %epoch:%{version}-%{release}
 Provides:	glade3-devel = %epoch:%{version}-%{release}
 Provides:	libgladeui%{major}-devel = %epoch:%{version}-%{release}
 Conflicts: %mklibname -d gladeui1_ 6
+Obsoletes: %mklibname -d gladeui1_
 
 %description -n %{libnamedev}
 Static library, headers files and documentation needed in order
@@ -129,7 +131,7 @@ rm -fr %buildroot
 %_datadir/icons/hicolor/*/apps/glade*
 
 %files -n %{libname}
-%{_libdir}/libgladeui-1.so.%{major}*
+%{_libdir}/libgladeui-%{api}.so.%{major}*
 
 %files -n %{libnamedev}
 %doc ChangeLog
