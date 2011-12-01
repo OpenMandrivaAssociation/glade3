@@ -79,11 +79,11 @@ done
 
 
 # menu
-perl -pi -e "s/Glade/Glade 3/" $RPM_BUILD_ROOT%{_datadir}/applications/*
+perl -pi -e "s/Glade/Glade 3/" %{buildroot}%{_datadir}/applications/*
 desktop-file-install --vendor="" \
   --remove-category="Application" \
   --add-category="GUIDesigner" \
-  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
+  --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
 find %buildroot -name \*.la|xargs chmod 644
 rm -f %buildroot%_libdir/glade3/*/libglade*a
