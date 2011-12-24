@@ -1,3 +1,5 @@
+%define _disable_ld_no_undefined 1
+
 %define name glade3
 %define api 	1
 %define major 	11
@@ -65,7 +67,7 @@ to develop applications using libgladeui (glade-3).
 	--enable-gtk-doc \
 	--disable-scrollkeeper
 
-%make
+%make LIBS='-lgmodule-2.0'
 
 %install
 rm -fr %buildroot
