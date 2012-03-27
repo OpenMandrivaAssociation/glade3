@@ -15,6 +15,7 @@ License: 	GPLv2+
 Url: 		http://glade.gnome.org/
 Group: 		Development/GNOME and GTK+
 Source0: 	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
+Patch0:		glade3-3.8.2-fix-linking.patch
 
 BuildRequires: 	libxml2-devel
 BuildRequires: 	libgnomeui2-devel
@@ -60,6 +61,9 @@ to develop applications using libgladeui (glade-3).
 
 %prep
 %setup -q -n %{name}-%version
+%apply_patches
+
+autoreconf -fi
 
 %build
 %configure2_5x \
