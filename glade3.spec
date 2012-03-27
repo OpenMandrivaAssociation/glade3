@@ -79,9 +79,6 @@ autoreconf -fi
 rm -fr %buildroot
 %makeinstall_std
 %{find_lang} %{name}-2.0 --with-gnome --all-name
-for omf in %buildroot%_datadir/omf/*/{*-??,*-??_??}.omf;do
-echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed -e s!%buildroot!!)" >> %name-2.0.lang
-done
 
 # menu
 perl -pi -e "s/Glade/Glade 3/" %{buildroot}%{_datadir}/applications/*
@@ -101,8 +98,6 @@ rm -f %buildroot%_libdir/glade3/*/libglade*a
 %{_libdir}/glade3/modules/libgladepython.so
 %{_libdir}/glade3/modules/libgladegtk.so
 %{_libdir}/glade3/modules/libgladegnome.so
-%dir %_datadir/omf/*
-%_datadir/omf/*/*-C.omf
 %{_datadir}/glade3
 %{_datadir}/applications/glade-3.desktop
 %_datadir/icons/hicolor/*/apps/glade*
