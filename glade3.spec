@@ -9,12 +9,12 @@
 Summary: 	GTK+ / GNOME 2 widget builder
 Name: 		%{name}
 Epoch:		1
-Version: 	3.8.1
-Release:	2
+Version: 	3.8.2
+Release:	1
 License: 	GPLv2+
 Url: 		http://glade.gnome.org/
 Group: 		Development/GNOME and GTK+
-Source0: 	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
+Source0: 	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
 
 BuildRequires: 	libxml2-devel
 BuildRequires: 	libgnomeui2-devel
