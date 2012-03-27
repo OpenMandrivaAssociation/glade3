@@ -24,6 +24,8 @@ BuildRequires: 	pygtk2.0-devel
 BuildRequires: 	gtk-doc
 BuildRequires: 	gnome-doc-utils
 BuildRequires: 	intltool
+#gw autoreconf needs this:
+BuildRequires: 	gnome-common
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils
 Requires: pygtk2.0
