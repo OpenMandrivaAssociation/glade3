@@ -6,15 +6,15 @@
 %define libname %mklibname gladeui %{api} %{major}
 %define devname %mklibname -d gladeui %{api}
 
-Summary: 	GTK+ / GNOME 2 widget builder
-Name: 		glade3
+Summary:	GTK+ / GNOME 2 widget builder
+Name:		glade3
 Epoch:		1
 Version:	3.8.3
 Release:	1
 License:	GPLv2+
 Group:		Development/GNOME and GTK+
-Url: 		http://glade.gnome.org
-Source0: 	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Url:		http://glade.gnome.org
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 Patch0:		glade3-3.8.2-fix-linking.patch
 
 BuildRequires:	desktop-file-utils
@@ -26,7 +26,6 @@ BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(libgnomeui-2.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(pygtk-2.0)
-
 Requires(post,postun):	desktop-file-utils
 Requires:	pygtk2.0
 
@@ -53,9 +52,6 @@ Summary:	Development libraries, include files for libgladeui (glade-3)
 Group:		Development/GNOME and GTK+
 Requires:	%{libname} = %{EVRD}
 Provides:	glade3-devel = %{EVRD}
-Provides:	libgladeui%{major}-devel = %{EVRD}
-Conflicts:	%mklibname -d gladeui1_ 6
-Obsoletes:	%mklibname -d gladeui1_
 
 %description -n %{devname}
 Development library, headers files and documentation needed in order
@@ -87,8 +83,6 @@ desktop-file-install --vendor="" \
 	--dir %{buildroot}%{_datadir}/applications \
 	%{buildroot}%{_datadir}/applications/*
 
-find %{buildroot} -name \*.la|xargs chmod 644
-rm -f %{buildroot}%_libdir/glade3/*/libglade*a
 
 %files -f %{name}-2.0.lang
 %doc AUTHORS COPYING README TODO
