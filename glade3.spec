@@ -9,21 +9,19 @@
 Summary:	GTK+ / GNOME 2 widget builder
 Name:		glade3
 Epoch:		1
-Version:	3.8.3
-Release:	9
+Version:	3.8.5
+Release:	1
 License:	GPLv2+
 Group:		Development/GNOME and GTK+
 Url:		http://glade.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
-Patch0:		glade3-3.8.2-fix-linking.patch
-
+Patch0:                glade3-3.8.2-fix-linking.patch
 BuildRequires:	desktop-file-utils
 #gw autoreconf needs this:
 BuildRequires:	gnome-common
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(gnome-doc-utils)
-BuildRequires:	pkgconfig(libgnomeui-2.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(pygtk-2.0)
 Requires(post,postun):	desktop-file-utils
@@ -60,14 +58,13 @@ to develop applications using libgladeui (glade-3).
 %prep
 %setup -q %{name}
 %apply_patches
-
 autoreconf -fi
 
 %build
-%configure2_5x \
-	--disable-static \
+%configure \
 	--enable-gtk-doc \
-	--disable-scrollkeeper
+	--disable-gnome \
+	--disable-compile-warnings PYTHON=python2
 
 %make LIBS='-lgmodule-2.0'
 
@@ -91,7 +88,6 @@ desktop-file-install --vendor="" \
 %dir %{_libdir}/glade3/modules/
 %{_libdir}/glade3/modules/libgladepython.so
 %{_libdir}/glade3/modules/libgladegtk.so
-%{_libdir}/glade3/modules/libgladegnome.so
 %{_datadir}/glade3
 %{_datadir}/applications/glade-3.desktop
 %{_datadir}/icons/hicolor/*/apps/glade*
