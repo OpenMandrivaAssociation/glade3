@@ -19,7 +19,7 @@ Patch0:                glade3-3.8.2-fix-linking.patch
 BuildRequires:	desktop-file-utils
 #gw autoreconf needs this:
 BuildRequires:	gnome-common
-BuildRequires:	gtk-doc
+BuildRequires:	pkgconfig(gtk-doc)
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(libxml-2.0)
