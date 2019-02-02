@@ -10,7 +10,7 @@ Summary:	GTK+ / GNOME 2 widget builder
 Name:		glade3
 Epoch:		1
 Version:	3.8.5
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		Development/GNOME and GTK+
 Url:		http://glade.gnome.org
@@ -24,6 +24,7 @@ BuildRequires:	intltool
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(pygtk-2.0)
+BuildRequires:	python2-devel
 Requires(post,postun):	desktop-file-utils
 Requires:	pygtk2.0
 
