@@ -66,7 +66,7 @@ autoreconf -fi
 	--disable-gnome \
 	--disable-compile-warnings PYTHON=python2
 
-%make LIBS='-lgmodule-2.0'
+%make_build LIBS='-lgmodule-2.0'
 
 %install
 %make_install
