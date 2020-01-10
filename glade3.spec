@@ -58,7 +58,7 @@ to develop applications using libgladeui (glade-3).
 
 %prep
 %setup -q %{name}
-%apply_patches
+%autopatch -p1
 autoreconf -fi
 
 %build
