@@ -23,10 +23,10 @@ BuildRequires:	gtk-doc
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(pygtk-2.0)
+#BuildRequires:	pkgconfig(pygtk-2.0)
 BuildRequires:	python2-devel
 Requires(post,postun):	desktop-file-utils
-Requires:	pygtk2.0
+#Requires:	pygtk2.0
 
 %description
 Glade is a RAD tool to enable quick & easy development of user interfaces
