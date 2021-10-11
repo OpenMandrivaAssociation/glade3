@@ -17,16 +17,21 @@ Url:		http://glade.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 Patch0:                glade3-3.8.2-fix-linking.patch
 BuildRequires:	desktop-file-utils
+BuildRequires:	gettext
+BuildRequires:	gettext-devel
 #gw autoreconf needs this:
 BuildRequires:	gnome-common
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(pygtk-2.0)
+BuildRequires:	pkgconfig(gtk+-2.0)
+#BuildRequires:	pkgconfig(pygtk-2.0)
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	glib-gettextize
 BuildRequires:	python2-devel
 Requires(post,postun):	desktop-file-utils
-Requires:	pygtk2.0
+#Requires:	pygtk2.0
 
 %description
 Glade is a RAD tool to enable quick & easy development of user interfaces
@@ -87,7 +92,7 @@ desktop-file-install --vendor="" \
 %{_bindir}/glade-3
 %dir %{_libdir}/glade3/
 %dir %{_libdir}/glade3/modules/
-%{_libdir}/glade3/modules/libgladepython.so
+#{_libdir}/glade3/modules/libgladepython.so
 %{_libdir}/glade3/modules/libgladegtk.so
 %{_datadir}/glade3
 %{_datadir}/applications/glade-3.desktop
