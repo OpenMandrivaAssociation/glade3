@@ -25,6 +25,7 @@ BuildRequires:	gtk-doc
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(libxml-2.0)
+BuildRequires:	pkgconfig(gtk+-2.0)
 #BuildRequires:	pkgconfig(pygtk-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	glib-gettextize
