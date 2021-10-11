@@ -92,7 +92,7 @@ desktop-file-install --vendor="" \
 %{_bindir}/glade-3
 %dir %{_libdir}/glade3/
 %dir %{_libdir}/glade3/modules/
-%{_libdir}/glade3/modules/libgladepython.so
+#{_libdir}/glade3/modules/libgladepython.so
 %{_libdir}/glade3/modules/libgladegtk.so
 %{_datadir}/glade3
 %{_datadir}/applications/glade-3.desktop
