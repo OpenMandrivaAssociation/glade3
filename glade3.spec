@@ -13,7 +13,7 @@ Version:	3.8.5
 Release:	7
 License:	GPLv2+
 Group:		Development/GNOME and GTK+
-Url:		http://glade.gnome.org
+Url:		https://glade.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 Patch0:                glade3-3.8.2-fix-linking.patch
 BuildRequires:	desktop-file-utils
