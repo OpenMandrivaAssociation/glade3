@@ -16,6 +16,11 @@ Group:		Development/GNOME and GTK+
 Url:		https://glade.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 Patch0:                glade3-3.8.2-fix-linking.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	desktop-file-utils
 BuildRequires:	gettext
 BuildRequires:	gettext-devel
