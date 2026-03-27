@@ -10,7 +10,7 @@ Summary:	GTK+ / GNOME 2 widget builder
 Name:		glade3
 Epoch:		1
 Version:	3.8.5
-Release:	7
+Release:	8
 License:	GPLv2+
 Group:		Development/GNOME and GTK+
 Url:		https://glade.gnome.org
