@@ -3,6 +3,7 @@
 
 # Workaround for new Clangs
 %global optflags %{optflags} -Wno-incompatible-function-pointer-types
+%global optflags %{optflags} -Wno-incompatible-pointer-types
 
 %define api 	1
 %define major 	11
