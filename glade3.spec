@@ -115,4 +115,5 @@ desktop-file-install --vendor="" \
 %{_includedir}/libgladeui-1.0/
 %{_libdir}/pkgconfig/gladeui-1.0.pc
 %{_libdir}/*.so
+%{_datadir}/gtk-doc/html/gladeui/
 
